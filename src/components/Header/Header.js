@@ -5,11 +5,11 @@ import Container from 'react-bootstrap/Container';
 export default function Header(props) {
 
     const classes = ['justify-content-between'];
-    const style = { marginBottom: '10px' };
+    const style = { marginBottom: '10px'};
 
     return (<>
         <Navbar bg={props.theme} variant={props.theme} className={classes} style={style}>
-            <Container>
+            <Container style={{textAlign:'center'}}>
                 <Navbar.Brand>{props.children}</Navbar.Brand>
             </Container>
         </Navbar>

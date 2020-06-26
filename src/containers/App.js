@@ -12,8 +12,8 @@ import GerarCurriculo from '../components/GerarCurriculo/GerarCurriculo';
 import GetEstadoCivil from '../utils/EstadoCivil';
 import GetEstadoCidade from '../utils/EstadoCidade';
 
-const title = 'Gerador de Curriculo Online';
-const theme = 'dark';
+const title = 'Gerador de Curriculo do Empregue.me';
+const theme = 'light';
 const styleAddNewValues = { alignItems: 'center' };
 const classAddNewValues = ['d-flex justify-content-between'];
 const classButton = ['btn-secondary'];
@@ -162,7 +162,8 @@ function App() {
         </Qualificacoes>
         <GerarCurriculo data={dadosCurriculo} />
       </Form>
-    </div >
+      {/* <Curriculo/> */}
+    </div>
   );
 }
 

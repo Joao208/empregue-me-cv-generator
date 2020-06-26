@@ -1,8 +1,7 @@
 {
-  "name": "react-gerador-curriculo",
+  "name": "Empregue.me Curriculo Generator",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://carloshximenes.github.io/react-gerador-curriculo",
   "dependencies": {
     "@react-pdf/renderer": "^1.6.7",
     "bootstrap": "^4.3.1",

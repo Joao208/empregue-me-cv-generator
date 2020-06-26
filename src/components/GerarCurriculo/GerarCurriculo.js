@@ -8,7 +8,7 @@ function GerarCurriculo(props) {
     const style = { marginBottom: '1%' };
     const styleButton = {
         color: '#fff',
-        backgroundColor: '#28a745',
+        backgroundColor: 'blue',
         borderColor: '#28a745',
         display: 'block',
         width: '100%',
@@ -27,10 +27,10 @@ function GerarCurriculo(props) {
         <Container style={style}>
             <PDFDownloadLink
                 document={<PdfDocument data={props.data} />}
-                fileName="curriculo.pdf"
+                fileName="Empregue-me Curriculo.pdf"
                 style={styleButton}
                 onClick={props.clicked}
-            >Download PDF</PDFDownloadLink>
+            >Baixar em PDF</PDFDownloadLink>
         </Container>
     </>);
 }

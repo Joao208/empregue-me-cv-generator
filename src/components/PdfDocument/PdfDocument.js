@@ -1,14 +1,16 @@
 import React from "react";
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { Page, Text, View, Document, StyleSheet, Link } from "@react-pdf/renderer";
 
 const styles = StyleSheet.create({
   page: {
-    backgroundColor: "#ffffff"
+    backgroundColor: "#ffffff",
   },
 
   nome: {
     fontSize: 20,
-    marginBottom: '10px'
+    marginBottom: '10px',
+    fontWeight:'bold',
+    textAlign:'center'
   },
 
   item: {
@@ -30,11 +32,21 @@ const styles = StyleSheet.create({
   header: {
     borderTop: '1px solid #ccc',
     borderBottom: '1px solid #ccc',
-    backgroundColor: '#ddd',
-    marginTop: '20px',
+    marginTop: '-40px',
     marginBottom: '5px',
     fontWeight: 'bold',
-    fontSize: 14
+    fontSize: 14,
+    color:'#6976bd'
+
+  },
+
+  pagerow:{
+      alignContent:'center',
+  },
+
+  bottom:{
+      textAlign:'center',
+      fontSize:10
   }
 });
 
@@ -70,7 +82,7 @@ export default function PdfDocument(props) {
 
               return (linhaExperiencia.cargo !== '') ? (<View key={index}>
                 <Text style={styles.item}>{linhaExperiencia.cargo}</Text>
-                <Text>{linhaExperiencia.empresa} [{linhaExperiencia.anoEntrada} - {linhaExperiencia.anoSaida}]</Text>
+                <Text>{linhaExperiencia.empresa} ({linhaExperiencia.anoEntrada} - {linhaExperiencia.anoSaida})</Text>
                 <Text style={styles.nextItem}>Principais Atividades: {linhaExperiencia.atividades}</Text>
               </View>
               ) : null;
@@ -86,6 +98,10 @@ export default function PdfDocument(props) {
             })
           }
         </View>
+        <View style={styles.bottom}>
+            <Text>Empregue.me</Text>
+            <Link>https://light-empregue-me.herokuapp.com</Link>
+           </View>
       </Page>
     </Document>
   </>);
